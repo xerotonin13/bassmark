@@ -1,32 +1,11 @@
 # :loud_sound: bassmark: Proactive Localized Watermarking
 
-<a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/-Python 3.8+-blue?style=for-the-badge&logo=python&logoColor=white"></a>
-<a href="https://black.readthedocs.io/en/stable/"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-black.svg?style=for-the-badge&labelColor=gray"></a>
-
 Inference code for AudioSeal, a method for speech localized watermarking, with state-of-the-art robustness and detector speed (training code coming soon).
 More details can be found in the [paper](https://arxiv.org/abs/2401.17264).
 
-[[`arXiv`](https://arxiv.org/abs/2401.17264)]
-[[`Colab notebook`](https://colab.research.google.com/github/facebookresearch/audioseal/blob/master/examples/colab.ipynb)][[🤗`Hugging Face`](https://huggingface.co/facebook/audioseal)]
-
-![fig](https://github.com/facebookresearch/audioseal/assets/1453243/5d8cd96f-47b5-4c34-a3fa-7af386ed59f2)
-
-# Updates:
-
-- 2024-06-17: Training code is now available. Check the [instruction](./docs/TRAINING.md) !!!
-- 2024-05-31: Our paper gets accepted at ICML'24 :)
-- 2024-04-02: We have updated our license to full MIT license (including the license for the model weights) ! Now you can use AudioSeal in commercial application too !
-- 2024-02-29: AudioSeal 0.1.2 is out, with more bug fixes for resampled audios and updated notebooks
-
 # Abtract
 
-We introduce AudioSeal, a method for speech localized watermarking, with state-of-the-art robustness and detector speed. It jointly trains a generator that embeds a watermark in the audio, and a detector that detects the watermarked fragments in longer audios, even in the presence of editing.
-Audioseal achieves state-of-the-art detection performance of both natural and synthetic speech at the sample level (1/16k second resolution), it generates limited alteration of signal quality and is robust to many types of audio editing. 
-Audioseal is designed with a fast, single-pass detector, that significantly surpasses existing models in speed — achieving detection up to two orders of magnitude faster, making it ideal for large-scale and real-time applications.
-
 # :mate: Installation
-
-AudioSeal requires Python >=3.8, Pytorch >= 1.13.0, [omegaconf](https://omegaconf.readthedocs.io/), [julius](https://pypi.org/project/julius/), and numpy. To install from PyPI:
 
 ```
 pip install audioseal
@@ -134,15 +113,3 @@ torchaudio does not handle the default backend well. Either downgrade your torch
 - [Pierre Fernandez](https://github.com/pierrefdz)
 - [Robin San Roman](https://github.com/robinsrm)
 
-# Citation
-
-If you find this repository useful, please consider giving a star :star: and please cite as:
-
-```
-@article{sanroman2024proactive,
-  title={Proactive Detection of Voice Cloning with Localized Watermarking},
-  author={San Roman, Robin and Fernandez, Pierre and Elsahar, Hady and D´efossez, Alexandre and Furon, Teddy and Tran, Tuan},
-  journal={ICML},
-  year={2024}
-}
-```
